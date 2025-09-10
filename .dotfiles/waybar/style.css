@@ -2,103 +2,64 @@
 @import "../colors/colors.css";
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 13px;
-    font-weight: bold;
-    background-color: transparent;
-    border-radius: 5px;
-    min-height: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #242122;
+  min-height: 0;
 }
 
 window,
 tooltip {
-    background-color: @background;
-}
-
-#waybar {
-    background: alpha(@background, 0.6);
-    border-radius: 0;
+  background-color: @background;
 }
 
 #workspaces {
-    margin: 1px 0;
+  margin: 1px 0;
 }
 
 #workspaces button {
-    color: @foreground;
-    border: none;
-    padding: 0 5px;
-}
-#workspaces button:hover {
-    color: @pink;
-    transition: none;
-    border-bottom: 1px solid @pink;
-    padding: 0 8px;
+  color: @foreground;
+  border: none;
+  padding: 0 5px;
 }
 
 #workspaces button.active {
-    color: @pink;
-    border: 2px solid @pink;
-    padding: 0 8px;
-    margin: 0 2px;
-}
-
-#workspaces button.urgent {
-    background-color: @red;
-    padding: 0 8px;
+  border: 2px solid @pink;
 }
 
 #custom-power,
 #tray,
-#bluetooth,
-#network,
-#battery,
 #pulseaudio,
 #clock,
 #cpu,
 #memory,
 #temperature {
-    color: @foreground;
-    margin: 1px 0;
-    padding: 0 10px;
+  color: @foreground;
+  margin: 1px 0;
+  padding: 0 10px;
 }
 
 #custom-power:hover,
-#bluetooth:hover,
-#network:hover,
-#battery:hover,
 #pulseaudio:hover,
 #clock:hover,
 #cpu:hover,
 #memory:hover,
-#temperature:hover  {
-    background-color: alpha(@select, 0.6);
+#temperature:hover {
+  background-color: alpha(@select, 0.6);
 }
 
-#bluetooth {
-    color: @yellow;
-}
-
-#network {
-    color: @green;
-}
-
-#battery {
-    color: @purple;
-}
-
-#pulseaudio {
-    color: @orange;
+/* #pulseaudio {
+  color: @orange;
 }
 
 #clock {
-    margin-right: 10px;
-    color: @blue;
-}
+  margin-right: 10px;
+  color: @blue;
+} */
 
 #custom-power {
-    margin-left: 10px;
-    padding: 0px 10px 0 15px;
+  padding: 0 15px 0 10px;
 }
 
 #cpu {

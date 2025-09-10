@@ -1,30 +1,31 @@
 {
-    "modules-left": ["custom/power", "hyprland/workspaces", "tray"],
-    "modules-center": ["cpu", "memory", "temperature"],
-    "modules-right": ["pulseaudio", "clock"],
-    
+    "modules-left": ["custom/power", "hyprland/workspaces"],
+//  "modules-center": ["cpu", "memory", "temperature"],
+    "modules-right": ["tray", "clock"],
+    "remote-control": true,
+
     "cpu": {
         "format": " {usage}%",
         "interval": 2
     },
 
     "memory": {
-        "format": " {used}G",
+        "format": " {used:0.1f}G",
         "interval": 2
     },
 
+
     "temperature": {
         "thermal-zone": 0,
-        "format": "{} °C",
-        "format-warn": "{} °C",
+        "format": " {}°C",
+        "format-warn": " {}°C",
         "critical-threshold": 70
     },
    
-
     "custom/power": {
-        "format" : "⭘ ",
+        "format" : "⭘",
         "tooltip": false,
-        "on-click": "wlogout -b 5",
+        "on-click": "wlogout -b 3",
     },
 
     "hyprland/workspaces": {
@@ -41,37 +42,6 @@
         "cursor": true,
     },
 
-    "bluetooth": {
-        "format": " 󰂯 ",
-        "format-disabled": " 󰂲 ",
-        "format-connected": " 󰂱 ",
-        "on-click": "blueman-manager",
-    },
-
-    "network": {
-        "format-wifi": "  {essid}",
-        "format-ethernet": "  Ethernet",
-        "format-linked": "  Linked (No IP)",
-        "format-disconnected": "  Disconnected",
-        "tooltip": false,
-    },
-
-    "battery": {
-        "states": {
-            "good": 85,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-alt": "{icon} {capacity}%",
-        "format-icons": [" ", " ", " ", " ", " "],
-        "tooltip-format": "{time}",
-        "cursor": false,
-    },
-
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-muted": "  {volume}%",
@@ -86,7 +56,8 @@
     },
 
     "clock": {
-        "format": "{:%a %d/%m/%Y ~ %H:%M}",
+//      "format": "{:%a %d/%m/%Y %H:%M}",
+        "format": "{:%H:%M}",
         "tooltip-format": "<span size='15000'><tt>{calendar}</tt></span>",
         "calendar": {
             "mode": "month",
@@ -97,6 +68,6 @@
                 "today": "<span color='#F9E2AF'><b>{}</b></span>",
             }
         },
-        "on-click": "swaync-client -t -sw",
+//      "on-click": "swaync-client -t -sw",
     }
 }

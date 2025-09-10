@@ -1,7 +1,12 @@
 # aliases
 
-alias ls "eza --icons"
+alias ls "exa --icons"
 alias treelist "tree -a -I '.git'"
+alias tlauncher='stay java -jar ~/TLauncher/TLauncher.jar'
+alias exbo='stay wine ~/.wine/drive_c/users/eeri/AppData/Roaming/EXBO/java/bin/ExboLauncher.exe'
+alias crosshair="stay ~/wl-crosshair/target/release/wl-crosshair ~/Documents/Aseprite/crosshair-10x10.png"
+alias crosshair-off="pkill wl-crosshair"
+alias clicker="~/.local/bin/clicker/clicker"
 
 # prevents apps from closing when closing terminal
 # usage: stay <command>
@@ -10,10 +15,12 @@ function stay
 end
 
 # custom greeting
-set KERNEL (uname -r)
-set fish_greeting (set_color --bold efcf40)">"(set_color ef9540)"<"(set_color ea3838)">" \
-  (set_color normal)"welcome to fish, the friendly interactive shell" 
+# set KERNEL (uname -r)
+# set fish_greeting (set_color --bold efcf40)">"(set_color ef9540)"<"(set_color ea3838)">" \
+#  (set_color normal)"welcome to fish, the friendly interactive shell" 
 
+set KERNEL (uname -r)
+set fish_greeting 
 
 function fish_user_key_bindings
   fish_vi_key_bindings
@@ -23,9 +30,9 @@ function fish_user_key_bindings
 end
 
 # UNCOMMENT FOR RIGHT PROMPT 
-# function fish_right_prompt
-#   echo (set_color 71717a)"$USER"@(prompt_hostname)
-# end
+#function fish_right_prompt
+  #  echo (set_color 71717a)"$USER"@(prompt_hostname)
+#end
 
 # indicator for vi
 function fish_mode_prompt
@@ -169,4 +176,11 @@ fish_add_path /home/mh/.spicetify
 
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 
-neofetch
+if test -z "$DISPLAY"; and test (tty) = "/dev/tty1"
+    exec Hyprland
+end
+
+if status --is-interactive
+    set -gx PATH $HOME/.local/share/solana/install/active_release/bin $PATH
+end
+set -gx PATH /home/eeri/.npm-global/bin $PATH

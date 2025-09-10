@@ -10,14 +10,13 @@ Configuration files for my Linux setup. Managed with `stow` using symbolic links
 - **neofetch** — Custom Neofetch config
 - **nvim** — Neovim setup
 - **waybar** — Wayland status bar
-- **waypaper** — Wallpaper manager for Wayland
 - **wofi** — Application launcher (Wayland alternative to rofi)
 - **zathura** — PDF reader configuration
 
 ## Installation
 
 ```sh
-git clone https://github.com/username/dotfiles.git
+git clone https://github.com/eerinessofsilence/.dotfiles.git
 cd dotfiles
-stow fish hypr kitty neofetch nvim waybar waypaper wofi zathura
-
+stow fish hypr kitty neofetch nvim waybar wofi zathura
+```
