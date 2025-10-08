@@ -6,7 +6,7 @@ alias tlauncher='stay java -jar ~/TLauncher/TLauncher.jar'
 alias exbo='stay wine ~/.wine/drive_c/users/eeri/AppData/Roaming/EXBO/java/bin/ExboLauncher.exe'
 alias crosshair="stay ~/wl-crosshair/target/release/wl-crosshair ~/Documents/Aseprite/crosshair-10x10.png"
 alias crosshair-off="pkill wl-crosshair"
-alias clicker="~/.local/bin/clicker/clicker"
+alias pgadmin4="source /home/eeri/venv/bin/activate.fish; stay /home/eeri/venv/bin/pgadmin4"
 
 # prevents apps from closing when closing terminal
 # usage: stay <command>
@@ -31,7 +31,7 @@ end
 
 # UNCOMMENT FOR RIGHT PROMPT 
 #function fish_right_prompt
-  #  echo (set_color 71717a)"$USER"@(prompt_hostname)
+#   echo (set_color 71717a)"$USER"@(prompt_hostname)
 #end
 
 # indicator for vi
@@ -55,7 +55,13 @@ set -U fish_cursor_default block
 
 # custom prompt
 function fish_prompt
+  
+  echo -n (set_color --bold 14b8a6)"→"
+
   set_color --bold 4086ef
+  
+  # space
+  echo -n " "
 
   set transformed_pwd (prompt_pwd | string replace -r "^~" (set_color --bold 06b6d4)"~"(set_color --bold 3b82f6))
 
@@ -74,21 +80,10 @@ function fish_prompt
     echo -n (set_color --bold 4338ca)")"
     set_color normal
   end
-
-  # space
-  echo -n " "
-
-  # arrows
-  # echo -n (set_color --bold efcf40)"❱"
-  # echo -n (set_color --bold ef9540)"❱"
-  # echo -n (set_color --bold ea3838)"❱"
   
-  echo -n (set_color --bold 14b8a6)"→"
-  
-  #space
-  echo -n " "
-
   set_color normal
+
+  echo -n " "
 end
 
 # set environment variables

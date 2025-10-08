@@ -1,17 +1,19 @@
-/* @import "$HOME/.config/colors/colors.css" */
-@import "../colors/colors.css";
+@define-color accent #afa193;
+@define-color fg #f6f1ea;
+@define-color bg #101010;
+@define-color bg-alt #252525;
 
 * {
   font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
   font-weight: bold;
-  background-color: #242122;
   min-height: 0;
 }
 
 window,
 tooltip {
-  background-color: @background;
+  background-color: @bg;
+  border-bottom: 2px solid @bg-alt;
 }
 
 #workspaces {
@@ -19,44 +21,29 @@ tooltip {
 }
 
 #workspaces button {
-  color: @foreground;
+  color: @fg;
   border: none;
   padding: 0 5px;
 }
 
 #workspaces button.active {
-  border: 2px solid @pink;
+  border: 2px solid @fg;
 }
 
 #custom-power,
 #tray,
 #pulseaudio,
-#clock,
-#cpu,
-#memory,
-#temperature {
-  color: @foreground;
+#clock {
+  color: @fg;
   margin: 1px 0;
   padding: 0 10px;
 }
 
 #custom-power:hover,
 #pulseaudio:hover,
-#clock:hover,
-#cpu:hover,
-#memory:hover,
-#temperature:hover {
-  background-color: alpha(@select, 0.6);
+#clock:hover {
+  background-color: alpha(@accent, 0.6);
 }
-
-/* #pulseaudio {
-  color: @orange;
-}
-
-#clock {
-  margin-right: 10px;
-  color: @blue;
-} */
 
 #custom-power {
   padding: 0 15px 0 10px;
