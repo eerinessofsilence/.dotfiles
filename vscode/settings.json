@@ -1,0 +1,101 @@
+{
+  "editor.fontFamily": "Jetbrains Mono",
+  "editor.fontLigatures": true,
+  "diffEditor.codeLens": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 4,
+  "editor.stickyScroll.enabled": false,
+  "editor.codeActionsOnSave": {},
+  "editor.quickSuggestions": { "strings": true },
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.cursorStyle": "line",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  "editor.wordWrapColumn": 500,
+  "editor.lineNumbers": "on",
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.formatOnSave": true,
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+
+  "files.exclude": {
+    "**/*.meta": true
+  },
+  "explorer.compactFolders": false,
+  "workbench.sideBar.location": "left",
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+
+  "prettier.arrowParens": "always",
+  "prettier.proseWrap": "never",
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "none",
+  "prettier.bracketSameLine": true,
+  "prettier.useEditorConfig": false,
+
+  "workbench.list.smoothScrolling": true,
+  "workbench.startupEditor": "none",
+
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.defaultProfile.windows": "fish",
+  "terminal.integrated.smoothScrolling": false,
+  "terminal.integrated.fontFamily": "Jetbrains Mono, DejaVu Math TeX Gyre",
+
+  "screencastMode.fontSize": 48,
+  "screencastMode.mouseIndicatorColor": "#00000000",
+
+  "html.format.contentUnformatted": "",
+  "settingsSync.ignoredSettings": [],
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "vscode_vibrancy.opacity": 0.1,
+  "redhat.telemetry.enabled": false,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "svg.preview.mode": "img",
+  "window.zoomLevel": 2,
+  "workbench.iconTheme": "material-icon-theme",
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.ignoreRebaseWarning": true,
+  "workbench.statusBar.visible": false,
+  "explorer.confirmDelete": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "workbench.colorTheme": "One Dark Pro",
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "Cargo.toml": "Cargo.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "workbench.secondarySideBar.defaultVisibility": "visible"
+}
